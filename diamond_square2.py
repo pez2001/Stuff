@@ -12,11 +12,9 @@ time = pygame.time
 """
 Regolith and baserock layers, the looseness of sediment, contributing area, slope angle, and variable rainfall patterns. 
 float contributingArea (CELL *cell)
-{
 cell->water = rainfall + contributingArea (all upstream neigbor cells);
 
 return cell->water;
-}
 
 
 Generally, water will carry sediment downstream until it can''t go any further (i.e. it will deposit in a lake, ocean, crater, etc.). 
@@ -24,7 +22,7 @@ Generally, water will carry sediment downstream until it can''t go any further (
 
 screen = None
 
-iterations = 9 # 2 minimum
+iterations = 8 # 2 minimum
 
 waterlevel = 0.1
 mountainlevel = 0.57
