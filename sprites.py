@@ -173,17 +173,17 @@ def	draw_ground_layer(screen,offset,size):
 def tick():pass
 
 def load_animation(char_pos,sprite_sheet):
-	char_size = (16,18)
+	char_size = (15,18)
 	
 	char_anims = {}
 	char_anims["stand_up"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+0,char_pos[1]+char_size[1]*0+0,char_size[0],char_size[1]))],0)
-	char_anims["stand_right"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+0,char_pos[1]+char_size[1]*1+0,char_size[0],char_size[1]))],0)
-	char_anims["stand_down"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+0,char_pos[1]+char_size[1]*2+0,char_size[0],char_size[1]))],0)
-	char_anims["stand_left"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+0,char_pos[1]+char_size[1]*3+0,char_size[0],char_size[1]))],0)
-	char_anims["walk_up"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*0+0,char_pos[1]+char_size[1]*0+0,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+1,char_pos[1]+char_size[1]*0+0,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*2+1,char_pos[1]+char_size[1]*0+0,char_size[0],char_size[1]))],80)
-	char_anims["walk_right"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*0+0,char_pos[1]+char_size[1]*1+1,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+1,char_pos[1]+char_size[1]*1+0,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*2+1,char_pos[1]+char_size[1]*1+1,char_size[0],char_size[1]))],80)
-	char_anims["walk_down"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*0+0,char_pos[1]+char_size[1]*2+2,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+1,char_pos[1]+char_size[1]*2+0,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*2+1,char_pos[1]+char_size[1]*2+2,char_size[0],char_size[1]))],80)
-	char_anims["walk_left"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*0+0,char_pos[1]+char_size[1]*3+3,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+1,char_pos[1]+char_size[1]*3+0,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*2+1,char_pos[1]+char_size[1]*3+3,char_size[0],char_size[1]))],80)
+	char_anims["stand_right"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+1,char_pos[1]+char_size[1]*1+0,char_size[0],char_size[1]))],0)
+	char_anims["stand_down"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+1,char_pos[1]+char_size[1]*2+0,char_size[0],char_size[1]))],0)
+	char_anims["stand_left"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+1,char_pos[1]+char_size[1]*3+0,char_size[0],char_size[1]))],0)
+	char_anims["walk_up"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*0+0,char_pos[1]+char_size[1]*0+1,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+1,char_pos[1]+char_size[1]*0+0,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*2+2,char_pos[1]+char_size[1]*0+1,char_size[0],char_size[1]))],80)
+	char_anims["walk_right"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*0+0,char_pos[1]+char_size[1]*1+1,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+1,char_pos[1]+char_size[1]*1+1,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*2+2,char_pos[1]+char_size[1]*1+1,char_size[0],char_size[1]))],80)
+	char_anims["walk_down"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*0+0,char_pos[1]+char_size[1]*2+1,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+1,char_pos[1]+char_size[1]*2+1,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*2+2,char_pos[1]+char_size[1]*2+1,char_size[0],char_size[1]))],80)
+	char_anims["walk_left"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*0+0,char_pos[1]+char_size[1]*3+1,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+1,char_pos[1]+char_size[1]*3+1,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*2+2,char_pos[1]+char_size[1]*3+1,char_size[0],char_size[1]))],80)
 	return(char_anims)
 
 def load_animations():
