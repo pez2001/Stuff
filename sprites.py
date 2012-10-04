@@ -177,13 +177,13 @@ def load_animation(char_pos,sprite_sheet):
 	
 	char_anims = {}
 	char_anims["stand_up"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+0,char_pos[1]+char_size[1]*0+0,char_size[0],char_size[1]))],0)
-	char_anims["stand_right"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+0,char_pos[1]+char_size[1]*1+1,char_size[0],char_size[1]))],0)
-	char_anims["stand_down"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+0,char_pos[1]+char_size[1]*2+1,char_size[0],char_size[1]))],0)
-	char_anims["stand_left"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+0,char_pos[1]+char_size[1]*3+1,char_size[0],char_size[1]))],0)
+	char_anims["stand_right"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+0,char_pos[1]+char_size[1]*1+0,char_size[0],char_size[1]))],0)
+	char_anims["stand_down"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+0,char_pos[1]+char_size[1]*2+0,char_size[0],char_size[1]))],0)
+	char_anims["stand_left"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+0,char_pos[1]+char_size[1]*3+0,char_size[0],char_size[1]))],0)
 	char_anims["walk_up"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*0+0,char_pos[1]+char_size[1]*0+0,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+1,char_pos[1]+char_size[1]*0+0,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*2+1,char_pos[1]+char_size[1]*0+0,char_size[0],char_size[1]))],80)
-	char_anims["walk_right"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*0+0,char_pos[1]+char_size[1]*1+1,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+1,char_pos[1]+char_size[1]*1+1,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*2+1,char_pos[1]+char_size[1]*1+1,char_size[0],char_size[1]))],80)
-	char_anims["walk_down"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*0+0,char_pos[1]+char_size[1]*2+1,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+1,char_pos[1]+char_size[1]*2+1,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*2+1,char_pos[1]+char_size[1]*2+1,char_size[0],char_size[1]))],80)
-	char_anims["walk_left"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*0+0,char_pos[1]+char_size[1]*3+1,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+1,char_pos[1]+char_size[1]*3+1,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*2+1,char_pos[1]+char_size[1]*3+1,char_size[0],char_size[1]))],80)
+	char_anims["walk_right"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*0+0,char_pos[1]+char_size[1]*1+1,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+1,char_pos[1]+char_size[1]*1+0,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*2+1,char_pos[1]+char_size[1]*1+1,char_size[0],char_size[1]))],80)
+	char_anims["walk_down"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*0+0,char_pos[1]+char_size[1]*2+2,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+1,char_pos[1]+char_size[1]*2+0,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*2+1,char_pos[1]+char_size[1]*2+2,char_size[0],char_size[1]))],80)
+	char_anims["walk_left"] = anim([frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*0+0,char_pos[1]+char_size[1]*3+3,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*1+1,char_pos[1]+char_size[1]*3+0,char_size[0],char_size[1])),frame(sprite_sheet,(8,18),(char_pos[0]+char_size[0]*2+1,char_pos[1]+char_size[1]*3+3,char_size[0],char_size[1]))],80)
 	return(char_anims)
 
 def load_animations():
@@ -281,8 +281,8 @@ def setup():
 	render_tiles_map(bg_layer,tiles_set)
 	
 	chars = ("monk_male","berserk_male","dknight_male","soldier_male","townfolk_male","townfolk2_male","monk_female","berserk_female","dknight_female","soldier_female","townfolk_female","townfolk2_female","warrior_male","magician_male","healer_male","ninja_male","ranger_male","townfolk3_male","warrior_female","magician_female","healer_female","ninja_female","ranger_female","townfolk3_female")
-	trees_num = 200
-	units_num = 1000
+	trees_num = 120
+	units_num = 500
 	objects = [ None for i in range(units_num+trees_num)]
 	for i in range(units_num):
 		objects[i] = moving_screen_obj(animations[random.choice(chars)],"char","walk",random.choice(("left","right","up","down")),random.randint(20,60),(random.randint(0,1000),random.randint(0,1000)))
