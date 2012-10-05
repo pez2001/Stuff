@@ -7,12 +7,6 @@ import time
 import Pyro4
 from Pyro4 import threadutil
 
-"""
-gs = xmlrpc.client.ServerProxy("http://localhost:35673",verbose=False)
-login = gs.login(hashlib.sha224("peztest".encode("utf-8")).hexdigest())
-print(login)
-"""
-
 class Chatter(object):
 	def __init__(self):
 		#self.game = Pyro4.core.Proxy("PYRO:Game@localhost:35674")
